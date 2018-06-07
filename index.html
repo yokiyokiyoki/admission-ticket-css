@@ -10,7 +10,7 @@
 </head>
 
 <body>
-    <div class="main">
+    <div class="main" id='draw'>
         <div class="main-body">
             <div class="main-body-title">2018年全国普通高校招生考试</div>
             <div class="main-body-sub-title">准考证</div>
@@ -90,8 +90,31 @@
     </div>
     <div class="button">转成图片</div>
 </body>
+<script src="./dom-to-image.min.js"></script>
 <script>
-    let domtoimage = require('dom-to-image');
+    console.log(domtoimage)
+    var node = document.getElementById('draw');
+
+    domtoimage.toPng(node)
+        .then(function (dataUrl) {
+            var img = new Image();
+            img.src = dataUrl;
+            document.body.appendChild(img);
+        })
+        .catch(function (error) {
+            console.error('oops, something went wrong!', error);
+        });
+
+    //文件自动下载
+    function downloadFile(fileName, content) {
+        var aLink = document.createElement('a');
+        var blob = new Blob([content]);
+        var evt = document.createEvent("HTMLEvents");
+        evt.initEvent("click", false, false);
+        aLink.download = fileName;
+        aLink.href = URL.createObjectURL(blob);
+        aLink.dispatchEvent(evt);
+    }
 </script>
 
 </html>
