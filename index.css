@@ -45,6 +45,11 @@ body > .main {
   height: 95px;
   border: 1px solid black;
   margin-right: 14px;
+  display: flex;
+  align-items: center;
+}
+.main-body-content-left img {
+  width: 80px;
 }
 .main-body-content-right-item {
   margin-bottom: 17px;
