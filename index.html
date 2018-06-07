@@ -108,14 +108,11 @@
 
 
     //文件自动下载
-    function downloadFile(fileName, content) {
-        var aLink = document.createElement('a');
-        var blob = new Blob([content]);
-        var evt = document.createEvent("HTMLEvents");
-        evt.initEvent("click", false, false);
-        aLink.download = fileName;
-        aLink.href = URL.createObjectURL(blob);
-        aLink.dispatchEvent(evt);
+    function download(href, title) {
+        const a = document.createElement('a');
+        a.setAttribute('href', href);
+        a.setAttribute('download', title);
+        a.click();
     }
 </script>
 
