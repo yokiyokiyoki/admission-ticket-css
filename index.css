@@ -8,6 +8,9 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
+  font-family: "Avenir", Helvetica, Arial, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
 body > .main {
   width: 325px;
@@ -20,7 +23,7 @@ body > .main {
 }
 .main-body-title {
   font-size: 20px;
-  height: 50px;
+  height: 40px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -32,6 +35,7 @@ body > .main {
   justify-content: center;
   align-items: center;
   margin-bottom: 28px;
+  margin-top: 5px;
 }
 .main-body-content {
   display: flex;
@@ -77,4 +81,12 @@ body > .main {
   display: block;
 }
 .main-footer {
+  font-size: 12px;
+  padding: 5px 0;
+  position: relative;
+  margin-left: -30px;
+}
+.main-footer .name {
+  display: block;
+  transform: scale(0.8);
 }
