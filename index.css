@@ -18,6 +18,8 @@ body {
   padding: 10px 20px;
   border: 1px solid black;
   border-radius: 3px;
+  cursor: pointer;
+  user-select: none;
 }
 body > .main {
   width: 325px;

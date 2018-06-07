@@ -10,7 +10,7 @@
 </head>
 
 <body>
-    <div class="main" id='draw'>
+    <div class="main" id='drawNode'>
         <div class="main-body">
             <div class="main-body-title">2018年全国普通高校招生考试</div>
             <div class="main-body-sub-title">准考证</div>
@@ -88,22 +88,24 @@
             <span class="name">2.纯属好玩</span>
         </div>
     </div>
-    <div class="button">转成图片</div>
+    <div class="button" id='draw'>转成图片</div>
 </body>
 <script src="./dom-to-image.min.js"></script>
 <script>
     console.log(domtoimage)
-    var node = document.getElementById('draw');
+    let node = document.getElementById('drawNode');
+    let draw = document.getElementById('draw');
+    draw.onclick = () => {
+        domtoimage.toPng(node)
+            .then((dataUrl) => {
+                console.log(dataUrl)
+                downloadFile('ticket.png', dataUrl)
+            })
+            .catch((error) => {
+                console.error('something went wrong!', error);
+            });
+    }
 
-    domtoimage.toPng(node)
-        .then(function (dataUrl) {
-            var img = new Image();
-            img.src = dataUrl;
-            document.body.appendChild(img);
-        })
-        .catch(function (error) {
-            console.error('oops, something went wrong!', error);
-        });
 
     //文件自动下载
     function downloadFile(fileName, content) {
