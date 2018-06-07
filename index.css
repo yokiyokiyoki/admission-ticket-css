@@ -22,11 +22,16 @@ body {
   user-select: none;
 }
 body > .main {
+  padding: 10px;
+  background: #006db7;
+}
+.main-container {
   width: 325px;
   height: 445px;
   border: 2px solid black;
   padding: 18px;
   box-sizing: border-box;
+  background: white;
 }
 .main-body {
 }
