@@ -18,5 +18,8 @@
   "homepage": "https://github.com/yokiyokiyoki/admission-ticket-css#readme",
   "devDependencies": {
     "http-server": "^0.11.1"
+  },
+  "dependencies": {
+    "dom-to-image": "^2.6.0"
   }
 }
