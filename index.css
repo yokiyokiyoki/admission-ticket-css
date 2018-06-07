@@ -8,9 +8,16 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
+  flex-direction: column;
   font-family: "Avenir", Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+}
+.button {
+  margin-top: 20px;
+  padding: 10px 20px;
+  border: 1px solid black;
+  border-radius: 3px;
 }
 body > .main {
   width: 325px;
