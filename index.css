@@ -16,10 +16,11 @@ body {
 .button {
   margin-top: 20px;
   padding: 10px 20px;
-  border: 1px solid black;
-  border-radius: 3px;
+  border: 1px solid #42b983;
+  border-radius: 50px;
   cursor: pointer;
   user-select: none;
+  color: #42b983;
 }
 body > .main {
   padding: 10px;
@@ -107,4 +108,10 @@ body > .main {
 .main-footer .name {
   display: block;
   transform: scale(0.8);
+}
+.changeContent {
+  margin-bottom: 20px;
+}
+.changeContent-item {
+  display: inline-block;
 }
