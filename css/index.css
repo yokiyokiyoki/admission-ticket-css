@@ -109,9 +109,3 @@ body > .main {
   display: block;
   transform: scale(0.8);
 }
-.changeContent {
-  margin-bottom: 20px;
-}
-.changeContent-item {
-  display: inline-block;
-}
