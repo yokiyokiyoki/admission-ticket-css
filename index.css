@@ -73,7 +73,6 @@ body > .main {
   display: inline-block;
 }
 .main-middle {
-  width: 270px;
   height: 120px;
   border: 1px solid black;
   display: flex;
