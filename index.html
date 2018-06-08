@@ -101,11 +101,10 @@
     draw.onclick = () => {
         domtoimage.toJpeg(node)
             .then((dataUrl) => {
-                console.log(dataUrl)
                 download(dataUrl, 'ticket')
             })
             .catch((error) => {
-                console.error('something went wrong!', error);
+                console.error('转换失败', error);
             });
     }
 
